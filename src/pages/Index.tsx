@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { 
   Sparkles, 
@@ -154,6 +153,14 @@ const Index = () => {
                       className="w-full h-full object-cover"
                     />
                   </div>
+                  {/* Add a new decorative element on top left */}
+                  <div className="absolute -top-6 -left-6 w-32 h-32 rounded-lg overflow-hidden luxury-shadow hidden md:block">
+                    <img 
+                      src="https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?auto=format&fit=crop&q=80" 
+                      alt="Biyaluxe Fabric" 
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
                 </div>
               </ScrollReveal>
             </div>
@@ -188,6 +195,22 @@ const Index = () => {
                     </p>
                     <p className="text-right mt-2 font-medium">- Bakhtawar Khan</p>
                   </div>
+                  {/* Add a decorative element to the about section */}
+                  <div className="absolute -top-8 -left-8 w-28 h-28 rounded-full overflow-hidden luxury-shadow hidden md:block rotate-6">
+                    <img 
+                      src="https://images.unsplash.com/photo-1609505848912-b7c3b8b4beda?auto=format&fit=crop&q=80" 
+                      alt="Fabric Detail" 
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  {/* Add another decorative element */}
+                  <div className="absolute top-1/2 -left-14 w-24 h-24 rounded-lg overflow-hidden luxury-shadow hidden lg:block -rotate-6">
+                    <img 
+                      src="https://images.unsplash.com/photo-1551232864-3f0890e580d9?auto=format&fit=crop&q=80" 
+                      alt="Design Process" 
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
                 </div>
               </ScrollReveal>
             </div>
@@ -203,6 +226,32 @@ const Index = () => {
                 <p className="mb-6 text-muted-foreground">
                   Every piece in our collection tells a story of cultural richness, exceptional quality, and meticulous attention to detail. We take pride in sourcing the finest fabrics and working with skilled artisans who bring our designs to life.
                 </p>
+                
+                {/* Add image gallery to about section */}
+                <div className="grid grid-cols-3 gap-3 mb-6">
+                  <div className="aspect-square rounded-lg overflow-hidden">
+                    <img 
+                      src="https://images.unsplash.com/photo-1633933358116-a27b902fad35?auto=format&fit=crop&q=80" 
+                      alt="Fabric Selection" 
+                      className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
+                    />
+                  </div>
+                  <div className="aspect-square rounded-lg overflow-hidden">
+                    <img 
+                      src="https://images.unsplash.com/photo-1626397030310-3e097a0122c3?auto=format&fit=crop&q=80" 
+                      alt="Design Process" 
+                      className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
+                    />
+                  </div>
+                  <div className="aspect-square rounded-lg overflow-hidden">
+                    <img 
+                      src="https://images.unsplash.com/photo-1619662936842-a71cc3ef3821?auto=format&fit=crop&q=80" 
+                      alt="Fashion Details" 
+                      className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
+                    />
+                  </div>
+                </div>
+                
                 <div className="space-y-4">
                   <div className="flex items-center gap-3">
                     <div className="w-10 h-10 rounded-full bg-biyaluxe-lightPurple flex items-center justify-center text-biyaluxe-purple">
@@ -243,46 +292,7 @@ const Index = () => {
         </div>
       </section>
       
-      {/* Product Showcase */}
-      <section id="products" className="section-padding">
-        <div className="container mx-auto">
-          <ScrollReveal>
-            <SectionTitle
-              subtitle="Our Collection"
-              title="Timeless Pieces for Every Occasion"
-            />
-          </ScrollReveal>
-          
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {products.map((product, index) => (
-              <ScrollReveal key={index} delay={index * 100} animation="zoom-in">
-                <ProductCard
-                  image={product.image}
-                  name={product.name}
-                  description={product.description}
-                />
-              </ScrollReveal>
-            ))}
-          </div>
-          
-          <ScrollReveal delay={300}>
-            <div className="mt-12 text-center">
-              <p className="opacity-80 mb-6">
-                Love what you see? Explore our full collection or request custom designs crafted just for you.
-              </p>
-              <Button 
-                variant="outline" 
-                className="border-biyaluxe-purple text-biyaluxe-purple hover:bg-biyaluxe-purple hover:text-white px-8 flex items-center gap-2"
-              >
-                View All Collections
-                <ArrowRight size={16} />
-              </Button>
-            </div>
-          </ScrollReveal>
-        </div>
-      </section>
-      
-      {/* Features Section */}
+      {/* Features Section - Updated with background images */}
       <section id="features" className="section-padding bg-gradient-to-b from-muted/30 to-background dark:from-background dark:to-muted/5">
         <div className="container mx-auto">
           <ScrollReveal>
@@ -298,6 +308,7 @@ const Index = () => {
                 icon={<Shirt size={28} />}
                 title="Premium Fabric"
                 description="We source only the finest materials to ensure comfort, durability, and luxury in every piece."
+                backgroundImage="https://images.unsplash.com/photo-1620799140188-3b2a02fd9a77?auto=format&fit=crop&q=80"
               />
             </ScrollReveal>
             
@@ -306,6 +317,7 @@ const Index = () => {
                 icon={<Scissors size={28} />}
                 title="Timeless Designs"
                 description="Our creations blend cultural heritage with contemporary fashion for truly timeless appeal."
+                backgroundImage="https://images.unsplash.com/photo-1588099768523-f4e6a5887f24?auto=format&fit=crop&q=80"
               />
             </ScrollReveal>
             
